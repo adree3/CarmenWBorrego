@@ -72,12 +72,12 @@ h1, h2, h3 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100px;
+    height: 60px;
     transition: height 0.3s ease;
 }
 
 .logo-firma {
-    height: 100px; 
+    height: 60px; 
     display: flex;
     align-items: center;
     transition: height 0.3s ease;
@@ -133,7 +133,7 @@ h1, h2, h3 {
 /* CUERPO PRINCIPAL (MAIN) */
 /* ============================================= */
 main {
-    padding-top: 120px;
+    padding-top: 80px;
 }
 
 .presentacion {
