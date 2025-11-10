@@ -1,0 +1,442 @@
+/* ============================================= */
+/* VARIABLES DE COLOR Y CONFIGURACIÓN GLOBAL */
+/* ============================================= */
+:root {
+    --c-oscuro: #323232;
+    --c-fondo: #F7F0E0;
+    --c-texto: #595347;
+    --c-texto-claro: #8C877D;
+    --c-acento-claro: #D9CAB0;
+    --c-fondo-claro: #F2EBDC;
+    --c-fondo-blanco: #F2EEEB;
+    --fuente-titulos: 'Merriweather', serif;
+    --fuente-cuerpo: 'Montserrat', sans-serif;    
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--fuente-cuerpo);
+    background-color: var(--c-fondo);
+    color: var(--c-texto);
+    line-height: 1.7;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto 0;
+    margin-bottom: 0;
+    padding: 0 2rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+p {
+    margin-bottom: 1.5rem;
+}
+
+h1, h2, h3 {
+    font-family: var(--fuente-cuerpo);
+    font-weight: 600;
+    color: var(--c-fondo);
+    margin-bottom: 1rem;
+}
+
+/* ============================================= */
+/* TOPBAR / NAVEGACIÓN */
+/* ============================================= */
+.topbar {
+    background-color: var(--c-oscuro);
+    padding: 0.5rem 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.topbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilos del logo (ya los tenías) */
+.logo-firma {
+    height: 100px; 
+    display: flex;
+    align-items: center;
+}
+
+.logo-firma img {
+    height: 100%;
+    width: auto;
+    display: block;
+}
+
+/* --- CAMBIOS EN LA NAVEGACIÓN --- */
+
+.navegacion-principal ul {
+    display: flex;
+    list-style: none;
+}
+
+.navegacion-principal li {
+    margin-left: 0.5rem; 
+}
+
+.navegacion-principal a {
+    color: var(--c-fondo);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1.5px;
+    font-weight: 500;
+    display: block; 
+    padding: 0.5rem 1rem; 
+    border-radius: 4px; 
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navegacion-principal a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--c-fondo);
+}
+
+
+.navegacion-principal a.current-page {
+    background-color: var(--c-fondo); 
+    color: var(--c-oscuro);
+}
+
+.navegacion-principal a.current-page:hover {
+    background-color: var(--c-fondo);
+    color: var(--c-oscuro);
+}
+
+/* ============================================= */
+/* CUERPO PRINCIPAL (MAIN) */
+/* ============================================= */
+main {
+    padding-top: 100px;
+}
+
+.presentacion {
+    padding: 4rem 0;
+}
+
+.grid-presentacion {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.presentacion-imagen img {
+    width: 100%;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-radius: 4px;
+}
+
+.presentacion-texto h1 {
+    text-transform: none;
+    color: var(--c-oscuro);
+    font-size: 2.5rem;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.presentacion-texto p:last-child {
+    margin-bottom: 0;
+}
+
+.btn-primario {
+    display: inline-block;
+    background-color: var(--c-oscuro);
+    color: var(--c-fondo);
+    padding: 0.8rem 2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    margin-top: 1.5rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-primario:hover {
+    background-color: var(--c-texto);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* DIVISOR */
+.pequeno-divisor {
+    border: 0;
+    height: 1px;
+    background-color: var(--c-acento-claro);
+    width: 20%;
+    margin: 3rem auto;
+}
+
+.texto-secundario {
+    padding-top: 2rem ;
+}
+.texto-secundario .container {
+    max-width: 800px;
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--c-texto);
+}
+
+/* ============================================= */
+/* SECCIÓN 3: CINTA DE PELÍCULA */
+/* ============================================= */
+.cinta-wrapper {
+    height: 400vh; 
+    position: relative;
+}
+
+#cinta-container {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.cinta-track {
+    display: flex;
+    height: 100%;
+    flex-wrap: nowrap; 
+    align-items: center;
+    width: fit-content;
+    padding-left: 2vw; 
+    padding-right: 2vw; 
+}
+
+/* ===== ESTILOS DE LA CINTA DE PELÍCULA (LÓGICA CORREGIDA) ===== */
+
+.cinta-imagen {
+    height: 70vh; 
+    width: auto;
+    background-color: var(--c-oscuro);
+    padding: 45px 10px 45px 0;
+    border-radius: 0;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    margin: 0;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.cinta-imagen:first-child {
+    padding-left: 10px;
+}
+
+.cinta-imagen img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.cinta-imagen::before,
+.cinta-imagen::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 10px;
+    height: 20px;
+    background-image: radial-gradient(circle at center, var(--c-fondo) 8px, transparent 8px);
+    background-size: 35px 100%; 
+    background-repeat: space;
+    background-position: center;
+}
+
+.cinta-imagen::before {
+    top: 12.5px; 
+}
+.cinta-imagen::after {
+    bottom: 12.5px;
+}
+
+.cinta-imagen:first-child::before,
+.cinta-imagen:first-child::after {
+    left: 10px;
+}
+
+/* ============================================= */
+/* SECCIÓN 4: ACERCA DE (DOS COLUMNAS) */
+/* ============================================= */
+.dos-columnas {
+    padding: 6rem 0;
+    background-color: var(--c-fondo-claro); 
+}
+
+.dos-columnas .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    max-width: 1000px;
+}
+.dos-columnas .columna p {
+    font-size: 1.1rem;
+    color: var(--c-texto);
+}
+
+/* ============================================= */
+/* SECCIÓN 5: COLLAGE "DESORDENADO" (MASONRY) */
+/* ============================================= */
+.collage-masonry {
+    padding: 6rem 0;
+}
+
+.collage-grid {
+    column-count: 3;
+    column-gap: 1.5rem;
+}
+
+.collage-item {
+    position: relative;
+    margin-bottom: 1.5rem; 
+    break-inside: avoid;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.collage-item img {
+    width: 100%;
+    transition: transform 0.4s ease-out;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(247, 240, 224, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.4s ease-out;
+}
+
+.overlay h3 {
+    color: var(--c-oscuro);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.collage-item:hover .overlay {
+    opacity: 0;
+}
+
+.collage-item:hover img {
+    transform: scale(1.05);
+}
+
+
+/* ============================================= */
+/* FOOTER Y SEPARADOR DE ONDA */
+/* ============================================= */
+
+.onda-separador {
+    margin-bottom: -1px; 
+    color: var(--c-oscuro); 
+}
+.onda-separador svg {
+    display: block;
+}
+footer {
+    background-color: var(--c-oscuro);
+    color: var(--c-fondo-claro);
+    text-align: center;
+    padding: 4rem 0 2rem 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--c-texto-claro);
+}
+
+
+/* ============================================= */
+/* DISEÑO RESPONSIVO (MÓVILES) */
+/* ============================================= */
+@media (max-width: 768px) {
+
+    /* Ajustamos el padding para la barra fija */
+    main {
+        padding-top: 80px; 
+    }
+    
+    .topbar {
+        padding: 1rem 0;
+    }
+    
+    .topbar .container {
+        flex-direction: column; /* Apilamos logo y nav */
+        gap: 0.5rem;
+    }
+    
+    .navegacion-principal li {
+        margin-left: 1rem;
+    }
+    
+    /* SECCIÓN 1: PRESENTACIÓN (Apilado) */
+    .grid-presentacion {
+        grid-template-columns: 1fr; /* 1 sola columna */
+        gap: 2rem;
+    }
+    
+    /* SECCIÓN 3: CINTA (Más pequeña) */
+    .cinta-wrapper {
+        height: 250vh; /* Menos scroll vertical */
+    }
+    .cinta-imagen {
+        height: 50vh; /* Imágenes más pequeñas en móvil */
+    }
+
+    /* SECCIÓN 4: DOS COLUMNAS (Apilado) */
+    .dos-columnas .container {
+        grid-template-columns: 1fr; /* 1 sola columna */
+        gap: 2rem;
+    }
+    
+    /* SECCIÓN 5: COLLAGE (Menos columnas) */
+    .collage-grid {
+        column-count: 2; /* 2 columnas en tablet */
+    }
+}
+
+@media (max-width: 480px) {
+    .navegacion-principal li {
+        margin-left: 0.8rem;
+    }
+    .navegacion-principal a {
+        font-size: 0.8rem;
+    }
+    
+    .collage-grid {
+        column-count: 1; /* 1 columna en móvil */
+    }
+}
