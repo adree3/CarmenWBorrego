@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio - Carmen W Borrego</title>
+    
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"></noscript>
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" as="style" onload="this.rel='stylesheet'">
+    
     <link rel="stylesheet" href="../../style.css">
     <link rel="stylesheet" href="portafolio.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,15 +21,15 @@
     <header class="topbar">
         <div class="container">
             <a href="../../index.html" class="logo-firma">
-                <img src="../../imagenes/firmaBlanca.png" alt="Logo de Carmen Borrego">
+                <img src="../../imagenes/firmaBlanca.webp" alt="Logo de Carmen Borrego">
             </a>
             
             <nav class="navegacion-principal">
                 <ul>
                     <li><a href="../../index.html">Inicio</a></li>
                     <li><a href="portafolio.html"class="current-page">Portafolio</a></li>
-                    <li><a href="../acercade/acercade.html">Acerca de</a></li>
                     <li><a href="../contacto/contacto.html">Contacto</a></li>
+                    <li><a href="#" class="cv-btn" target="_blank" style="color: white;" data-label="Descargar CV" download><i class="fa-solid fa-download"></i> CV</a></li>
                 </ul>
             </nav>
         </div>
@@ -39,28 +43,39 @@
                 <div class="portafolio-grid">
                     
                     <a href="subapartados/fotografia/fotografia.html" class="portafolio-card c-verde">
-                        <img src="../../imagenes/presentacion.jpg" alt="Proyecto de Fotografía">
+                        <img src="../../imagenes/presentacion.webp"
+                             srcset="../../imagenes/responsive/presentacion-600.webp 600w, ../../imagenes/presentacion.webp 1200w"
+                             sizes="(max-width: 768px) 100vw, 50vw"
+                             width="1200" height="870"
+                             alt="Proyecto de Fotografía"
+                             fetchpriority="high"
+                             decoding="async">
                         <div class="portafolio-overlay">
                             <h3>Fotografía</h3>
                         </div>
                     </a>
                     
-                    <a href="subapartados/serigrafia/serigrafia.html" class="portafolio-card  c-verde">
-                        <img src="../../imagenes/presentacion.jpg" alt="Proyecto de Serigrafía">
+                    <a href="subapartados/serigrafia/serigrafia.html" class="portafolio-card c-verde">
+                        <img src="../../imagenes/presentacion.webp"
+                             srcset="../../imagenes/responsive/presentacion-600.webp 600w, ../../imagenes/presentacion.webp 1200w"
+                             sizes="(max-width: 768px) 100vw, 50vw"
+                             width="1200" height="870"
+                             alt="Proyecto de Serigrafía"
+                             fetchpriority="high"
+                             decoding="async">
                         <div class="portafolio-overlay">
                             <h3>Serigrafía</h3>
                         </div>
                     </a>
                     
-                    <a href="subapartados/escultura/escultura.html" class="portafolio-card  c-verde">
-                        <img src="../../imagenes/presentacion.jpg" alt="Proyecto de Escultura">
-                        <div class="portafolio-overlay">
-                            <h3>Escultura</h3>
-                        </div>
-                    </a>
-                    
-                    <a href="subapartados/grabado/grabado.html" class="portafolio-card  c-verde">
-                        <img src="../../imagenes/presentacion.jpg" alt="Proyecto de Grabado">
+                    <a href="subapartados/grabado/grabado.html" class="portafolio-card c-verde">
+                        <img src="../../imagenes/presentacion.webp"
+                             srcset="../../imagenes/responsive/presentacion-600.webp 600w, ../../imagenes/presentacion.webp 1200w"
+                             sizes="(max-width: 768px) 100vw, 50vw"
+                             width="1200" height="870"
+                             alt="Proyecto de Grabado"
+                             fetchpriority="high"
+                             decoding="async">
                         <div class="portafolio-overlay">
                             <h3>Grabado</h3>
                         </div>
@@ -83,5 +98,6 @@
             <p>&copy; 2025 Carmen Borrego. Todos los derechos reservados.</p>
         </div>
     </footer>
+    <script defer></script>
 </body>
 </html>

@@ -96,6 +96,15 @@ h1, h2, h3 {
     list-style: none;
 }
 
+.cv-btn {
+    background-color: var(--c-texto);
+    font-weight:700;
+    padding:10px 18px;
+    border-radius:10px;
+    align-items:center;
+    gap:6px;
+}
+
 .navegacion-principal li {
     margin-left: 0.5rem; 
 }
@@ -335,7 +344,7 @@ main {
 /* SECCIÓN 5: COLLAGE "DESORDENADO" */
 /* ============================================= */
 .collage-masonry {
-    padding: 6rem 0;
+    padding: 5rem 0;
 }
 
 .collage-grid {
@@ -423,6 +432,7 @@ main {
 /* ============================================= */
 
 .onda-separador {
+    margin-top: -11.111vw;
     margin-bottom: -1px; 
     color: var(--c-oscuro); 
 }

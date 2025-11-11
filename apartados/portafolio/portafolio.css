@@ -7,12 +7,12 @@
 }
 
 .portafolio-grid-container {
-    padding: 4rem 0;
+    padding: 5rem 0;
 }
 
 .portafolio-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
 }
 
