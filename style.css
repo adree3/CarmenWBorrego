@@ -133,7 +133,7 @@ h1, h2, h3 {
 /* CUERPO PRINCIPAL (MAIN) */
 /* ============================================= */
 main {
-    padding-top: 80px;
+    padding-top: 68px;
 }
 
 .presentacion {
@@ -339,48 +339,31 @@ main {
 }
 
 .collage-grid {
-    display: grid;
-    gap: 1.5rem;
-    grid-template-columns: repeat(4, 1fr); 
+    column-gap: 1.5rem;
+    column-count: 4;
 }
-.item-viajes {
-    grid-column: span 1;
-    grid-row: span 1;
-}
-.item-origenes {
-    grid-column: span 1;
-    grid-row: span 1;
-}
-.item-reflexiones {
-    grid-column: span 1;
-    grid-row: span 1;
-}
-.item-digital1 {
-    grid-column: span 1;
-    grid-row: span 1;
-}
-.item-digital2 {
-    grid-column: span 1;
-    grid-row: span 1;
-}
+
 .collage-item {
     position: relative;
-    overflow: hidden;
+    margin-bottom: 1.5rem;
+    break-inside: avoid;
     border-radius: 4px;
+    transition: transform 0.3s ease;
 }
 
 .collage-item img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
+    border-radius: 4px;
+    display: block;
     transition: transform 0.4s ease-out;
 }
 
-.collage-item.c-verde img{
+.collage-item.c-verde{
     box-shadow: 0 0 18px 4px rgba(60, 110, 60, 0.5);
 }
 
-.collage-item.c-rojo img {
+.collage-item.c-rojo {
     box-shadow: 0 0 18px 4px rgba(160, 70, 70, 0.5);
 }
 
@@ -395,6 +378,7 @@ main {
     justify-content: center;
     align-items: center;
     transition: opacity 0.4s ease-out;
+    border-radius: 4px;
 }
 
 .overlay h3 {
@@ -410,8 +394,29 @@ main {
 
 .collage-item:hover img {
     transform: scale(1.05);
+    z-index: 10;
 }
 
+.collage-item img.blur-load,
+.presentacion-imagen img.blur-load {
+    filter: blur(20px);
+    transform: scale(1.1);
+    transition: filter 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.collage-item img.blur-load.loaded,
+.presentacion-imagen img.blur-load.loaded {
+    filter: blur(0);
+    transform: scale(1);
+}
+
+.cinta-imagen img.blur-load {
+    filter: blur(20px);
+    transition: filter 0.5s ease-out;
+}
+.cinta-imagen img.blur-load.loaded {
+    filter: blur(0);
+}
 
 /* ============================================= */
 /* FOOTER Y SEPARADOR DE ONDA */
@@ -437,10 +442,16 @@ footer p {
     color: var(--c-texto-claro);
 }
 
-
+ 
 /* ============================================= */
 /* DISEÑO RESPONSIVO (MÓVILES) */
 /* ============================================= */
+@media (max-width: 992px) {
+    .collage-grid {
+        column-count: 3;
+    }
+}
+
 @media (max-width: 768px) {
 
     .topbar .container {
@@ -471,6 +482,8 @@ footer p {
         height: 250vh;
     }
 
+    
+
     .cinta-imagen {
         height: 40vh;
         padding: 30px 10px 30px 0;
@@ -488,11 +501,7 @@ footer p {
     }
 
     .collage-grid {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-areas:
-            "viajes   digital1"
-            "origenes digital2"
-            "reflex   reflex";
+        column-count: 2;
     }
 }
 
@@ -503,12 +512,6 @@ footer p {
         letter-spacing: 1px;
     }
     .collage-grid {
-        grid-template-columns: 1fr;
-        grid-template-areas:
-            "viajes"
-            "origenes"
-            "reflex"
-            "digital1"
-            "digital2";
+        column-count: 1;
     }
 }

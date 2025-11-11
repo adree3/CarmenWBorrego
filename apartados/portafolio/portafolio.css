@@ -1,0 +1,84 @@
+.titulo-pagina {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.portafolio-grid-container {
+    padding: 4rem 0;
+}
+
+.portafolio-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.portafolio-card {
+    display: block;
+    position: relative;
+    border-radius: 4px;
+    text-decoration: none;
+    
+}
+
+.portafolio-card.c-verde {
+    box-shadow: 0 0 18px 4px rgba(60, 110, 60, 0.5);
+}
+
+.portafolio-card.c-rojo {
+    box-shadow: 0 0 18px 4px rgba(160, 70, 70, 0.5);
+}
+
+.portafolio-card img {
+    width: 100%;
+    height: 550px; 
+    object-fit: cover;
+    transition: transform 0.4s ease-out;
+}
+
+.portafolio-card:hover img {
+    transform: scale(1.05);
+}
+
+.portafolio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(247, 240, 224, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 0.4s ease-out;
+}
+
+.portafolio-card:hover .portafolio-overlay {
+    opacity: 0;
+}
+
+.portafolio-overlay h3 {
+    color: var(--c-oscuro);
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+
+/* ============================================= */
+/* RESPONSIVE (Portafolio Grid) */
+/* ============================================= */
+
+@media (max-width: 768px) {
+    .portafolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .portafolio-card img {
+        height: 300px;
+    }
+}

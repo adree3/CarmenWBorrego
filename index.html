@@ -34,7 +34,12 @@
         <section id="inicio" class="presentacion">
             <div class="container grid-presentacion">
                 <div class="presentacion-imagen">
-                    <img src="imagenes/presentacion.jpg" alt="Retrato de la artista Carmen Borrego">
+                    <img
+                        src="imagenes/presentacion.webp"
+                        srcset="imagenes/responsive/presentacion-600.webp 600w, imagenes/presentacion.webp 1200w"
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                        width="1200" height="870" alt="Retrato de la artista Carmen Borrego" decoding="async"
+                        fetchpriority="high">
                 </div>
                 <div class="presentacion-texto">
                     <h1>Presentación</h1>
@@ -56,15 +61,69 @@
                     </div>
                 </section>
                 <div class="cinta-track">
-                    <div class="cinta-imagen"><img src="imagenes/carrusel.JPG" alt="Imagen de portafolio 1"></div>
-                    <div class="cinta-imagen"><img src="imagenes/carrusel(1).JPG" alt="Imagen de portafolio 2"></div>
-                    <div class="cinta-imagen"><img src="imagenes/carrusel(2).jpg" alt="Imagen de portafolio 3"></div>
-                    <div class="cinta-imagen"><img src="imagenes/carrusel(3).JPG" alt="Imagen de portafolio 4"></div>
-                    <div class="cinta-imagen"><img src="imagenes/carrusel(4).jpg" alt="Imagen de portafolio 5"></div>
-                    <div class="cinta-imagen"><img src="imagenes/carrusel(5).jpg" alt="Imagen de portafolio 6"></div>
-                    <div class="cinta-imagen"><img src="imagenes/carrusel(6).jpg" alt="Imagen de protafolio 7"></div>
-                    <div class="cinta-imagen"><img src="imagenes/carrusel(8).jpg" alt="Imagen de protafolio 9"></div>
-                    <div class="cinta-imagen"><img src="imagenes/carrusel(7).jpg" alt="Imagen de protafolio 8"></div>
+                    <div class="cinta-imagen">
+                        <img class="blur-load"
+                            src="imagenes/blur/carrusel-blur.webp" 
+                            data-full="imagenes/carrusel.webp"
+                            width="1200" height="800"
+                            alt="Imagen de portafolio 1"  loading="lazy" decoding="async">
+                    </div>
+                    <div class="cinta-imagen">
+                        <img class="blur-load" 
+                            src="imagenes/blur/carrusel(1)-blur.webp" 
+                            data-full="imagenes/carrusel(1).webp"
+                            width="1200" height="1800"
+                            alt="Imagen de portafolio 2"  loading="lazy" decoding="async">
+                    </div>
+                    <div class="cinta-imagen">
+                        <img class="blur-load" 
+                            src="imagenes/blur/carrusel(2)-blur.webp" 
+                            data-full="imagenes/carrusel(2).webp"
+                            width="1200" height="800"
+                            alt="Imagen de portafolio 3"  loading="lazy" decoding="async">
+                    </div>
+                    <div class="cinta-imagen">
+                        <img class="blur-load" 
+                            src="imagenes/blur/carrusel(3)-blur.webp" 
+                            data-full="imagenes/carrusel(3).webp"
+                            width="1200" height="1800"
+                            alt="Imagen de portafolio 4" loading="lazy" decoding="async">
+                    </div>
+                    <div class="cinta-imagen">
+                        <img class="blur-load" 
+                            src="imagenes/blur/carrusel(4)-blur.webp" 
+                            data-full="imagenes/carrusel(4).webp"
+                            width="1200" height="800"
+                            alt="Imagen de portafolio 5"  loading="lazy" decoding="async">
+                    </div>
+                    <div class="cinta-imagen">
+                        <img class="blur-load" 
+                            src="imagenes/blur/carrusel(5)-blur.webp" 
+                            data-full="imagenes/carrusel(5).webp"
+                            width="1200" height="800"
+                            alt="Imagen de portafolio 6" loading="lazy" decoding="async">
+                    </div>
+                    <div class="cinta-imagen">
+                        <img class="blur-load" 
+                            src="imagenes/blur/carrusel(6)-blur.webp" 
+                            data-full="imagenes/carrusel(6).webp"
+                            width="1200" height="1800"
+                            alt="Imagen de portafolio 7" loading="lazy" decoding="async">
+                    </div>
+                    <div class="cinta-imagen">
+                        <img class="blur-load" 
+                            src="imagenes/blur/carrusel(8)-blur.webp" 
+                            data-full="imagenes/carrusel(8).webp"
+                            width="1200" height="1800"
+                            alt="Imagen de portafolio 9" loading="lazy" decoding="async">
+                    </div>
+                    <div class="cinta-imagen">
+                        <img class="blur-load" 
+                            src="imagenes/blur/carrusel(7)-blur.webp" 
+                            data-full="imagenes/carrusel(7).webp"
+                            width="1200" height="1800"
+                            alt="Imagen de portafolio 8" loading="lazy" decoding="async">
+                    </div>
                 </div>
             </section>
         </div>
@@ -84,39 +143,63 @@
             <div class="container">
                 <div class="collage-grid">
                     <div class="collage-item item-viajes c-verde">
-                        <img src="imagenes/lugares.jpg" alt="Proyecto de Viajes">
-                        <div class="overlay">
-                            <h3>Viajes</h3>
-                        </div>
+                        <img class="blur-load"
+                            src="imagenes/blur/lugares-blur.webp"
+                            data-full="imagenes/lugares.webp"
+                            data-srcset="imagenes/responsive/lugares-600.webp 600w, imagenes/lugares.webp 1200w"
+                            sizes="(max-width: 480px) 100vw, (max-width: 992px) 33vw, 25vw"
+                            width="1200" height="800"
+                            alt="Proyecto de Viajes" 
+                            loading="lazy" decoding="async">
+                        <div class="overlay"><h3>Viajes</h3></div>
                     </div>
                     <div class="collage-item item-origenes c-verde">
-                        <img src="imagenes/origenes.jpg" alt="Proyecto sobre Orígenes">
-                        <div class="overlay">
-                            <h3>Orígenes</h3>
-                        </div>
+                        <img class="blur-load"
+                            src="imagenes/blur/origene-blur.webp"
+                            data-full="imagenes/origene.webp"
+                            data-srcset="imagenes/responsive/origene-600.webp 600w, imagenes/origene.webp 1200w"
+                            sizes="(max-width: 480px) 100vw, (max-width: 992px) 33vw, 25vw"
+                            width="1200" height="800"
+                            alt="Proyecto sobre Orígenes" 
+                            loading="lazy" decoding="async">
+                        <div class="overlay"><h3>Orígenes</h3></div>
                     </div>
                     <div class="collage-item item-reflexiones c-verde">
-                        <img src="imagenes/homenajes.jpg" alt="Proyecto sobre homenajes">
-                        <div class="overlay">
-                            <h3>homenajes</h3>
-                        </div>
+                        <img class="blur-load"
+                            src="imagenes/blur/homenajes-blur.webp"
+                            data-full="imagenes/homenajes.webp"
+                            data-srcset="imagenes/responsive/homenajes-600.webp 600w, imagenes/homenajes.webp 1200w"
+                            sizes="(max-width: 480px) 100vw, (max-width: 992px) 33vw, 25vw"
+                            width="1200" height="1500"
+                            alt="Proyecto sobre homenajes" 
+                            loading="lazy" decoding="async">
+                        <div class="overlay"><h3>homenajes</h3></div>
                     </div>
                     <div class="collage-item item-digital1 c-rojo">
-                        <img src="imagenes/digital(1).png" alt="Proyecto de digital 1">
-                        <div class="overlay">
-                            <h3>Encargo</h3>
-                        </div>
-                    </div>
+                        <img class="blur-load"
+                            src="imagenes/blur/digital(1)-blur.webp"
+                            data-full="imagenes/digital(1).webp"
+                            data-srcset="imagenes/responsive/digital(1)-600.webp 600w, imagenes/digital(1).webp 1200w"
+                            sizes="(max-width: 480px) 100vw, (max-width: 992px) 33vw, 25vw"
+                            width="1200" height="1800"
+                            alt="Proyecto de digital 1" 
+                            loading="lazy" decoding="async">
+                        <div class="overlay"><h3>Encargo</h3></div>
+                    </div>       
                     <div class="collage-item item-digital2 c-rojo">
-                        <img src="imagenes/digital(2).png" alt="Proyecto de digital 2">
-                        <div class="overlay">
-                            <h3>Encargo</h3>
-                        </div>
+                        <img class="blur-load"
+                            src="imagenes/blur/digital(2)-blur.webp"
+                            data-full="imagenes/digital(2).webp"
+                            data-srcset="imagenes/responsive/digital(2)-600.webp 600w, imagenes/digital(2).webp 1200w"
+                            sizes="(max-width: 480px) 100vw, (max-width: 992px) 33vw, 25vw"
+                            width="1200" height="1800"
+                            alt="Proyecto de digital 2" 
+                            loading="lazy" decoding="async">
+                        <div class="overlay"><h3>Encargo</h3></div>
                     </div>
                 </div>
             </div>
         </section>
-
     </main>
 
     <div class="onda-separador">
