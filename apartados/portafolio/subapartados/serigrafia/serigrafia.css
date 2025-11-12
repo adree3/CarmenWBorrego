@@ -93,7 +93,9 @@ header {
     column-gap: 1.5rem;
 }
 
-/* (No necesitamos la clase -3-cols aquí) */
+.masonry-grid-3-cols {
+    column-count: 3;
+}
 
 .masonry-item {
     position: relative;
@@ -129,6 +131,67 @@ header {
 .masonry-item img.blur-load.loaded {
     filter: blur(0);
     transform: scale(1);
+}
+
+
+/* ============================================= */
+/* ESTILOS PARA GALERÍA VER MÁS / MENOS*/
+/* ============================================= */
+
+.masonry-grid--collapsed:not(.masonry-grid-3-cols) .masonry-item:nth-child(n+9) {
+    display: none;
+}
+
+.masonry-grid--collapsed.masonry-grid-3-cols .masonry-item:nth-child(n+10) {
+    display: none;
+}
+
+.btn-ver-mas {
+    display: block;
+    width: fit-content;
+    margin: 2rem auto 0;
+    background-color: transparent;
+    color: var(--c-oscuro);
+    border: 2px solid var(--c-oscuro);
+    padding: 0.7rem 1.8rem;
+    border-radius: 4px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-ver-mas:hover {
+    background-color: var(--c-oscuro);
+    color: var(--c-fondo);
+    transform: translateY(-2px);
+}
+
+.btn-ver-menos {
+    display: block;
+    width: fit-content;
+    margin: 2rem auto 0;
+    background-color: transparent;
+    color: var(--c-oscuro);
+    border: 2px solid var(--c-oscuro);
+    padding: 0.7rem 1.8rem;
+    border-radius: 4px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: none;
+}
+.btn-ver-menos:hover {
+    background-color: var(--c-oscuro);
+    color: var(--c-fondo);
+    transform: translateY(-2px);
 }
 
 /* ============================================= */

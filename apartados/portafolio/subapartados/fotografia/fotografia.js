@@ -20,12 +20,10 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         lastScrollTop = Math.max(0, scrollTop);
     });
-});
-/**
- * LÓGICA DE CARGA PEREZOSA (LAZY LOADING) CON "BLUR-UP"
- */
-document.addEventListener("DOMContentLoaded", () => {
-        const lazyImages = document.querySelectorAll('img.blur-load');
+    /**
+     * LAZY LOADING CON "BLUR-UP"
+     */
+    const lazyImages = document.querySelectorAll('img.blur-load');
     if (!lazyImages.length) return;
 
     const observerOptions = {
@@ -61,5 +59,31 @@ document.addEventListener("DOMContentLoaded", () => {
     }, observerOptions);
     lazyImages.forEach(image => {
         imgObserver.observe(image);
+    });
+
+    /**
+     * VER MÁS Y VER MENOS PARA GALERÍAS
+     */
+    const galleryGroups = document.querySelectorAll('.masonry-group');
+
+    galleryGroups.forEach(group => {
+        const verMasButton = group.querySelector('.btn-ver-mas');
+        const verMenosButton = group.querySelector('.btn-ver-menos');
+        const grid = group.querySelector('.masonry-grid');
+
+        if (!verMasButton || !verMenosButton || !grid) return;
+
+        verMasButton.addEventListener('click', () => {
+            grid.classList.remove('masonry-grid--collapsed');
+            verMasButton.style.display = 'none';
+            verMenosButton.style.display = 'block';
+        });
+
+        verMenosButton.addEventListener('click', () => {
+            grid.classList.add('masonry-grid--collapsed');
+            verMasButton.style.display = 'block';
+            verMenosButton.style.display = 'none';
+            group.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
     });
 });

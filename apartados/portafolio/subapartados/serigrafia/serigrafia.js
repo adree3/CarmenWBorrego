@@ -57,4 +57,26 @@ document.addEventListener("DOMContentLoaded", () => {
     lazyImages.forEach(image => {
         imgObserver.observe(image);
     });
+    const galleryGroups = document.querySelectorAll('.masonry-group');
+
+    galleryGroups.forEach(group => {
+        const verMasButton = group.querySelector('.btn-ver-mas');
+        const verMenosButton = group.querySelector('.btn-ver-menos');
+        const grid = group.querySelector('.masonry-grid');
+
+        if (!verMasButton || !verMenosButton || !grid) return;
+
+        verMasButton.addEventListener('click', () => {
+            grid.classList.remove('masonry-grid--collapsed');
+            verMasButton.style.display = 'none';
+            verMenosButton.style.display = 'block';
+        });
+
+        verMenosButton.addEventListener('click', () => {
+            grid.classList.add('masonry-grid--collapsed');
+            verMasButton.style.display = 'block';
+            verMenosButton.style.display = 'none';
+            group.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+    });
 });
