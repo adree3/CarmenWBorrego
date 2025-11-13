@@ -7,6 +7,12 @@
     <link rel="stylesheet" href="../../../../style.css"> 
     <link rel="stylesheet" href="fotografia.css">
     
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../../imagenes/iconos/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../../imagenes/iconos/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../../imagenes/iconos/favicon-16x16.png">
+    <link rel="manifest" href="../../../../imagenes/iconos/site.webmanifest">
+    <link rel="shortcut icon" href="../../../../imagenes/iconos/favicon.ico">
+
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"></noscript>
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" as="style" onload="this.rel='stylesheet'">
     
@@ -31,7 +37,7 @@
             <div class="masonry-wrapper">
                 <section class="masonry-group">
                     <h2>ALFIL</h2>
-                    <div class="masonry-grid">
+                    <div class="masonry-layout">
                         <div class="masonry-item">
                             <img
                                 src="../../../../imagenes/fotografia/alfil(1).webp"
@@ -61,7 +67,7 @@
                 
                 <section class="masonry-group">
                     <h2>BODA</h2>
-                    <div class="masonry-grid masonry-grid-3-cols">
+                    <div class="uniform-grid grid-3-cols">
                         <div class="masonry-item">
                             <img class="blur-load"
                                 src="../../../../imagenes/fotografia/blur/boda(1)-blur.webp"
@@ -106,7 +112,7 @@
                 </section>
                 <section class="masonry-group">
                     <h2>MODA</h2>
-                    <div class="masonry-grid masonry-grid--collapsed">
+                    <div class="masonry-layout masonry-layout--collapsed">
                         <div class="masonry-item">
                             <img class="blur-load"
                                 src="../../../../imagenes/fotografia/blur/moda(1)-blur.webp"
@@ -228,13 +234,17 @@
                                 width="1200" height="1900"  alt="Foto Moda 15" decoding="async">
                         </div>
                     </div>
-                    <button class="btn-ver-mas">Ver más</button>
-                    <button class="btn-ver-menos">Ver menos</button>
+                    <div class="galeria-controles">
+                        <span class="linea-deco"></span>
+                        <button class="btn-ver-mas">Ver más</button>
+                        <button class="btn-ver-menos">Ver menos</button>
+                        <span class="linea-deco"></span>
+                    </div>
                 </section>
                 
                 <section class="masonry-group">
                     <h2>PAISAJE URBANO</h2>
-                    <div class="masonry-grid masonry-grid-3-cols">
+                    <div class="uniform-grid grid-3-cols">
                         <div class="masonry-item">
                             <img class="blur-load"
                                 src="../../../../imagenes/fotografia/blur/paisajeUrbano(1)-blur.webp"
@@ -296,7 +306,7 @@
 
                 <section class="masonry-group">
                     <h2>PAISAJE NATURALEZA</h2>
-                    <div class="masonry-grid masonry-grid-3-cols">
+                    <div class="uniform-grid grid-3-cols">
                         <div class="masonry-item">
                             <img class="blur-load"
                                 src="../../../../imagenes/fotografia/blur/paisajeNaturaleza(1)-blur.webp"
@@ -350,7 +360,7 @@
 
                 <section class="masonry-group">
                     <h2>RETRATO</h2>
-                    <div class="masonry-grid">
+                    <div class="masonry-layout">
                         <div class="masonry-item">
                             <img class="blur-load"
                                 src="../../../../imagenes/fotografia/blur/retrato(1)-blur.webp"
@@ -380,7 +390,7 @@
                 
                 <section class="masonry-group">
                     <h2>STREET PHOTO</h2>
-                    <div class="masonry-grid">
+                    <div class="uniform-grid">
                         <div class="masonry-item">
                             <img class="blur-load"
                                 src="../../../../imagenes/fotografia/blur/streetPhoto(1)-blur.webp"
@@ -442,7 +452,7 @@
                 
                 <section class="masonry-group">
                     <h2>TAUROMAQUIA</h2>
-                    <div class="masonry-grid masonry-grid-3-cols masonry-grid--collapsed">
+                    <div class="uniform-grid grid-3-cols uniform-grid--collapsed">
                         <div class="masonry-item">
                             <img class="blur-load"
                                 src="../../../../imagenes/fotografia/blur/tauromaquia(1)-blur.webp"
@@ -742,8 +752,12 @@
                                 width="1200" height="800"  alt="Foto Tauromaquia 37" decoding="async">
                         </div>
                     </div>
-                    <button class="btn-ver-mas">Ver más</button>
-                    <button class="btn-ver-menos">Ver menos</button>
+                    <div class="galeria-controles">
+                        <span class="linea-deco"></span>
+                        <button class="btn-ver-mas">Ver más</button>
+                        <button class="btn-ver-menos">Ver menos</button>
+                        <span class="linea-deco"></span>
+                    </div>
                 </section>
             </div>
         </div>
@@ -756,7 +770,23 @@
     </div>
     <footer id="contacto">
         <div class="container">
-            <p>&copy; 2025 Carmen Borrego. Todos los derechos reservados.</p>
+            
+            <div class="footer-social">
+                <a href="https://www.instagram.com/carmenw.borrego_art?igsh=YTdvcjJqdXNsaHUx" target="_blank" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com/carmenw.borrego" target="_blank" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="mailto:carmenhmpk93@gmail.com" aria-label="Email">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+            </div>
+            
+            <p>
+                &copy; 2025 Carmen Borrego. Todos los derechos reservados. <br>+34 603 453 357
+            </p>
+
         </div>
     </footer>
     <script src="fotografia.js" defer></script>

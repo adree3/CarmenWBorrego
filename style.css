@@ -353,11 +353,20 @@ main {
 }
 
 .collage-item {
-    position: relative;
     margin-bottom: 1.5rem;
     break-inside: avoid;
     border-radius: 4px;
     transition: transform 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.collage-item-inner {
+    position: relative; /* Para que el overlay se posicione bien */
+    overflow: hidden; /* Recorta la imagen escalada (scale(1.1)) */
+    border-radius: 4px; /* Mantiene las esquinas redondeadas */
+    height: 100%; /* Asegura que ocupe todo el <a> */
 }
 
 .collage-item img {
@@ -443,7 +452,7 @@ footer {
     background-color: var(--c-oscuro);
     color: var(--c-fondo-claro);
     text-align: center;
-    padding: 4rem 0 2rem 0;
+    padding: 0rem 0 2rem 0;
 }
 
 footer p {
@@ -452,7 +461,29 @@ footer p {
     color: var(--c-texto-claro);
 }
 
- 
+.footer-social {
+    margin-bottom: 0.2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.footer-social a {
+    color: var(--c-texto-claro);
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: var(--c-fondo);
+    transform: translateY(-3px);
+}
+
+footer p {
+    line-height: 1.6;
+}
+
 /* ============================================= */
 /* DISEÑO RESPONSIVO (MÓVILES) */
 /* ============================================= */

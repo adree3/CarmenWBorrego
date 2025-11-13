@@ -3,14 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carmen Borrego - Portafolio de Arte</title>
+    <title>Contacto - Carmen Borrego</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="contacto.css">
     
+    <link rel="apple-touch-icon" sizes="180x180" href="../../imagenes/iconos/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../imagenes/iconos/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../imagenes/iconos/favicon-16x16.png">
+    <link rel="manifest" href="../../imagenes/iconos/site.webmanifest">
+    <link rel="shortcut icon" href="../../imagenes/iconos/favicon.ico">
+
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"></noscript>
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" as="style" onload="this.rel='stylesheet'">
     
-    <link rel="stylesheet" href="../../style.css">
-    
-    <meta name="description" content="Portafolio de Carmen Borrego, artista de la Facultad de Bellas Artes de Salamanca, especializada en grabado, dibujo y fotografía.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <meta name="description" content="Contacta con Carmen Borrego para proyectos, colaboraciones o encargos.">
 </head>
 <body>
 
@@ -24,7 +35,7 @@
                 <ul>
                     <li><a href="../../index.html">Inicio</a></li>
                     <li><a href="../portafolio/portafolio.html">Portafolio</a></li>
-                    <li><a href="contacto.html"class="current-page">Contacto</a></li>
+                    <li><a href="contacto.html" class="current-page">Contacto</a></li>
                     <li><a href="#" class="cv-btn" target="_blank" style="color: white;" data-label="Descargar CV" download><i class="fa-solid fa-download"></i> CV</a></li>
                 </ul>
             </nav>
@@ -32,8 +43,42 @@
     </header>
 
     <main>
-
-        
+        <div class="contact-wrapper">
+            <div class="container">
+                
+                <h1 class="titulo-pagina">Hablemos</h1>
+                <p class="subtitulo-pagina">¿Tienes un proyecto en mente o quieres una obra por encargo? Rellena el formulario y me pondré en contacto contigo.</p>
+                
+                <form id="contact-form" class="contact-form">
+                    
+                    <div class="form-group">
+                        <label for="nombre">Nombre Completo</label>
+                        <input type="text" id="nombre" name="nombre_completo" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="compania">Nombre de la Compañía (Opcional)</label>
+                        <input type="text" id="compania" name="compania">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" rows="6" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <button type="submit" class="btn-primario">Enviar Mensaje</button>
+                    </div>
+                    <div id="form-status" class="status-message"></div>
+                </form>
+                
+            </div>
+        </div>
     </main>
 
     <div class="onda-separador">
@@ -44,8 +89,26 @@
 
     <footer id="contacto">
         <div class="container">
-            <p>&copy; 2025 Carmen Borrego. Todos los derechos reservados.</p>
+            
+            <div class="footer-social">
+                <a href="https://www.instagram.com/carmenw.borrego_art?igsh=YTdvcjJqdXNsaHUx" target="_blank" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com/carmenw.borrego" target="_blank" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="mailto:carmenhmpk93@gmail.com" aria-label="Email">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+            </div>
+            
+            <p>
+                &copy; 2025 Carmen Borrego. Todos los derechos reservados. <br>+34 603 453 357
+            </p>
+
         </div>
     </footer>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="contacto.js" defer></script>
 </body>
 </html>

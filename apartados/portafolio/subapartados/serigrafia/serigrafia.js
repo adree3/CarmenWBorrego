@@ -57,23 +57,34 @@ document.addEventListener("DOMContentLoaded", () => {
     lazyImages.forEach(image => {
         imgObserver.observe(image);
     });
+    
+    /**
+     * VER MÁS Y VER MENOS PARA GALERÍAS
+     */
     const galleryGroups = document.querySelectorAll('.masonry-group');
 
     galleryGroups.forEach(group => {
         const verMasButton = group.querySelector('.btn-ver-mas');
         const verMenosButton = group.querySelector('.btn-ver-menos');
-        const grid = group.querySelector('.masonry-grid');
+        const grid = group.querySelector('.masonry-layout') || group.querySelector('.uniform-grid');
 
         if (!verMasButton || !verMenosButton || !grid) return;
 
         verMasButton.addEventListener('click', () => {
-            grid.classList.remove('masonry-grid--collapsed');
+            grid.classList.remove('masonry-layout--collapsed');
+            grid.classList.remove('uniform-grid--collapsed');
+            
             verMasButton.style.display = 'none';
             verMenosButton.style.display = 'block';
         });
 
         verMenosButton.addEventListener('click', () => {
-            grid.classList.add('masonry-grid--collapsed');
+            if (grid.classList.contains('masonry-layout')) {
+                grid.classList.add('masonry-layout--collapsed');
+            } else {
+                grid.classList.add('uniform-grid--collapsed');
+            }
+
             verMasButton.style.display = 'block';
             verMenosButton.style.display = 'none';
             group.scrollIntoView({ behavior: 'smooth', block: 'start' });

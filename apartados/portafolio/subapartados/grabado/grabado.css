@@ -1,5 +1,5 @@
 /* ============================================= */
-/* PÁGINA DE SUB-APARTADO (SERIGRAFÍA) */
+/* PÁGINA DE SUB-APARTADO (GRABADO) */
 /* ============================================= */
 
 main {
@@ -86,12 +86,12 @@ header {
     border-bottom: 2px solid var(--c-acento-claro);
 }
 
-.masonry-layout {
+.masonry-grid {
     column-count: 4;
     column-gap: 1.5rem;
 }
 
-.masonry-layout-3-cols {
+.masonry-grid-3-cols {
     column-count: 3;
 }
 
@@ -131,35 +131,21 @@ header {
     transform: scale(1);
 }
 
-
 /* ============================================= */
-/* ESTILOS PARA GALERÍA VER MÁS / MENOS*/
+/* ESTILOS PARA GALERÍA COLAPSABLE (VER MÁS) */
 /* ============================================= */
 
-.masonry-layout--collapsed:not(.masonry-layout-3-cols) .masonry-item:nth-child(n+9) {
+.masonry-grid--collapsed:not(.masonry-grid-3-cols) .masonry-item:nth-child(n+9) {
     display: none;
 }
-
-.masonry-layout--collapsed.masonry-layout-3-cols .masonry-item:nth-child(n+10) {
+.masonry-grid--collapsed.masonry-grid-3-cols .masonry-item:nth-child(n+10) {
     display: none;
-}
-
-.galeria-controles {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    margin-top: 2rem;
-}
-
-.galeria-controles .linea-deco {
-    flex-grow: 1;
-    height: 1px;
-    background-color: var(--c-acento-claro);
 }
 
 .btn-ver-mas {
     display: block;
     width: fit-content;
+    margin: 2rem auto 0;
     background-color: transparent;
     color: var(--c-oscuro);
     border: 2px solid var(--c-oscuro);
@@ -173,7 +159,6 @@ header {
     transition: all 0.3s ease;
     cursor: pointer;
 }
-
 .btn-ver-mas:hover {
     background-color: var(--c-oscuro);
     color: var(--c-fondo);
@@ -183,6 +168,7 @@ header {
 .btn-ver-menos {
     display: block;
     width: fit-content;
+    margin: 2rem auto 0;
     background-color: transparent;
     color: var(--c-oscuro);
     border: 2px solid var(--c-oscuro);
@@ -203,77 +189,25 @@ header {
     transform: translateY(-2px);
 }
 
-
 /* ============================================= */
-/* ESTILO DE GRID UNIFORME */
-/* ============================================= */
-.uniform-grid {
-    display: grid;
-    gap: 1.5rem;
-    grid-template-columns: repeat(4, 1fr);
-}
-
-.uniform-grid.grid-3-cols {
-    grid-template-columns: repeat(3, 1fr);
-}
-
-.uniform-grid .masonry-item {
-    margin-bottom: 0;
-    position: relative;
-    overflow: hidden;
-    border-radius: 4px;
-    aspect-ratio: 3 / 4;
-}
-
-.uniform-grid.grid-3-cols .masonry-item {
-    aspect-ratio: 3 / 2;
-}
-
-.uniform-grid .masonry-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.uniform-grid .masonry-item:hover img {
-    transform: scale(1.05);
-}
-
-.uniform-grid--collapsed:not(.grid-3-cols) .masonry-item:nth-child(n+9) {
-    display: none;
-}
-.uniform-grid--collapsed.grid-3-cols .masonry-item:nth-child(n+10) {
-    display: none;
-}
-
-/* ============================================= */
-/* RESPONSIVE (SERIGRAFÍA) */
+/* RESPONSIVE (GRABADO) */
 /* ============================================= */
 
 @media (max-width: 992px) {
-    .masonry-layout,
-    .uniform-grid,
-    .uniform-grid.grid-3-cols {
+    .masonry-grid {
         column-count: 3;
-        grid-template-columns: repeat(3, 1fr);
     }
 }
 
 @media (max-width: 768px) {
-    .masonry-layout,
-    .uniform-grid,
-    .uniform-grid.grid-3-cols {
+    .masonry-grid {
         column-count: 2;
-        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 480px) {
-    .masonry-layout,
-    .uniform-grid,
-    .uniform-grid.grid-3-cols {
+    .masonry-grid {
         column-count: 1;
-        grid-template-columns: 1fr;
     }
     .subapartado-header {
         justify-content: center;

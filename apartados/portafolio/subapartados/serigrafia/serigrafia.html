@@ -8,6 +8,12 @@
     <link rel="stylesheet" href="../../../../style.css"> 
     <link rel="stylesheet" href="serigrafia.css">
     
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../../imagenes/iconos/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../../imagenes/iconos/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../../imagenes/iconos/favicon-16x16.png">
+    <link rel="manifest" href="../../../../imagenes/iconos/site.webmanifest">
+    <link rel="shortcut icon" href="../../../../imagenes/iconos/favicon.ico">
+
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"></noscript>
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" as="style" onload="this.rel='stylesheet'">
     
@@ -30,9 +36,9 @@
     <main>
         <div class="container">
             <div class="masonry-wrapper">
-                <section class="masonry-group">
+                <section id="KOI" class="masonry-group">
                     <h2>KOI</h2>
-                    <div class="masonry-grid masonry-grid--collapsed">
+                    <div class="masonry-layout masonry-layout--collapsed">
                         <div class="masonry-item">
                             <img class="blur-load"
                                 src="../../../../imagenes/serigrafia/blur/1-blur.webp"
@@ -403,12 +409,16 @@
                         </div>
 
                     </div>
-                    <button class="btn-ver-mas">Ver más</button>
-                    <button class="btn-ver-menos">Ver menos</button>
+                    <div class="galeria-controles">
+                        <span class="linea-deco"></span>
+                        <button class="btn-ver-mas">Ver más</button>
+                        <button class="btn-ver-menos">Ver menos</button>
+                        <span class="linea-deco"></span>
+                    </div>
                 </section>
                 <section class="masonry-group">
                     <h2>Quintanar de la orden</h2>
-                    <div class="masonry-grid masonry-grid-3-cols">
+                    <div class="uniform-grid grid-3-cols uniform-grid--collapsed">
                         <div class="masonry-item">
                             <img class="blur-load"
                                 src="../../../../imagenes/serigrafia/blur/Q0-blur.webp"
@@ -493,8 +503,7 @@
                 </section>
                 <section class="masonry-group">
                     <h2>Rugido del Sol</h2>
-                    <div class="masonry-grid">
-                        
+                    <div class="uniform-grid">
                         <div class="masonry-item">
                             <img class="blur-load"
                                 src="../../../../imagenes/serigrafia/blur/R1-blur.webp"
@@ -542,10 +551,9 @@
 
                     </div>
                 </section>
-                <section class="masonry-group">
+                <section id="Santorini" class="masonry-group">
                     <h2>Santorini</h2>
-                    <div class="masonry-grid">
-                        
+                    <div class="uniform-grid uniform-grid--collapsed">
                         <div class="masonry-item">
                             <img class="blur-load"
                                 src="../../../../imagenes/serigrafia/blur/S0-blur.webp"
@@ -631,7 +639,32 @@
             </div>
         </div>
     </main>
+    <div class="onda-separador">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#323232" fill-opacity="1" d="M0,160L80,186.7C160,213,320,267,480,266.7C640,267,800,213,960,197.3C1120,181,1280,203,1360,213.3L1440,224L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
+        </svg>
+    </div>
+    <footer id="contacto">
+        <div class="container">
+            
+            <div class="footer-social">
+                <a href="https://www.instagram.com/carmenw.borrego_art?igsh=YTdvcjJqdXNsaHUx" target="_blank" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com/carmenw.borrego" target="_blank" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="mailto:carmenhmpk93@gmail.com" aria-label="Email">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+            </div>
+            
+            <p>
+                &copy; 2025 Carmen Borrego. Todos los derechos reservados. <br>+34 603 453 357
+            </p>
 
+        </div>
+    </footer>
     <script src="serigrafia.js" defer></script>
 </body>
 </html>
